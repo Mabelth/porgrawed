@@ -10,7 +10,7 @@
     $db_host="localhost";
     $db_nom="prueba";
     $db_usuario="root";
-    $db_contraseña="";
+    $db_contraseña="hh";
     
     $conexion=mysqli_connect($db_host, $db_usuario,$db_contraseña,$db_nom,);
     $consulta="selec *from datos";
