@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>conecion</title>
+    <title>paguina_busqueda</title>
 </head>
 
 <body>
@@ -22,35 +22,19 @@
     }
     mysqli_select_db($conexion, $db_nom) or die("no se encuentra la bd");
     mysqli_set_charset($conexion, "utf8");
-    // 
-    // 
-    $consulta = "selec *from datos where nom like '$busqueda'";
+    $consulta = "SELECT * FROM `datos` WHERE `nom` LIKE '%$busqueda%'";
+    /* el % sirve para decir que puede haber caracteres antes o despues */
     $resultado = mysqli_query($conexion, $consulta);
+    while($fila=mysqli_fetch_array($resultado, MYSQLI_ASSOC))
+    {
+        echo"<table><tr><td>";
+        echo $fila['id']. "</td><td>";
+        echo $fila['nom'] . "</td><td>";
+        echo $fila['apell'] . "</td><td>";
+        echo $fila['edad']. "</td></tr></table>";
+        echo "<br>";
 
-
-    /*<table class="default">
-  
-    <tr>
-  
-      <td>Celda 1</td>
-  
-      <td>Celda 2</td>
-  
-      <td>Celda 3</td>
-  
-    </tr>
-  
-    <tr>
-  
-      <td>Celda 4</td>
-  
-      <td>Celda 5</td>
-  
-      <td>Celda 6</td>
-  
-    </tr>
-  
-  </table>*/
+    }
     mysqli_close(exit);
 
     ?>

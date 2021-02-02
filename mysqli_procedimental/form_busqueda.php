@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>conecion</title>
+    <title>form_busqueda</title>
 </head>
 
 <body>
 <form action="paguina_busqueda.php" method="get">
 <label>Buscar:<input type="text" name="buscar"></label>
-<input type="button" name="enviando" value="enviar">
+<input type="submit" name="enviando" value="enviar">
 
  
 </body>
