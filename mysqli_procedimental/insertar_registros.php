@@ -10,6 +10,7 @@
 <body>
     <?php
         require("datos.php");
+        $id = $_GET["id"];
         $nom=$_GET["nom"];
         $apell = $_GET["apell"];
         $edad = $_GET["edad"];
@@ -25,17 +26,18 @@
         }
         mysqli_select_db($conexion, $db_nom) or die("no se encuentra la bd");
         mysqli_set_charset($conexion, "utf8");
-        $consulta = "INSERT INTO datos ( nom, apell, edad) VALUES ( '$nom', '$apell', '$edad');";
+        $consulta = "INSERT INTO datos ( id,nom, apell, edad) VALUES ( 'null','$nom', '$apell', '$edad');";
         $resultado = mysqli_query($conexion, $consulta);
         if($resultado==false)
         { echo"error en la consuta";}
         else
-        {echo "registro guardado <br><br>";
-        echo "<table><tr><td>";
-        echo $fila['id'] . "</td><td>";
-        echo $fila['nom'] . "</td><td>";
-        echo $fila['apell'] . "</td><td>";
-        echo $fila['edad'] . "</td></tr></table>";
+        {echo "<br>registro guardado <br><br>";
+        echo "<table><tr>";
+        echo  "<td>$id</td>";
+        echo  "<td>$nom</td>";
+        echo  "<td>$apell</td>";
+         echo  "<td>$edad</td>";
+       echo "</tr></table>";
         echo "<br>";
         
         }

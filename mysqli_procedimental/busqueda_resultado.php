@@ -29,7 +29,7 @@
         echo $fila['nom'] . "</td><td>";
         echo $fila['apell'] . "</td><td>";
         echo $fila['edad'] . "</td></tr></table>";
-        echo "br";
+        echo "<br>";
     }
     mysqli_close(exit);
     }
