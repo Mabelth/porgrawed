@@ -29,12 +29,12 @@
     $consulta = "DELETE FROM `datos` WHERE `datos`.`id` = '$id';";
     $resultado = mysqli_query($conexion, $consulta);
     if ($resultado == false) {
-        echo "error en la consuta";
+        echo "error en la consuta<br>";
     } else {
-        echo "eliminar guardado <br><br>";
+        echo "<br>registros eliminados <br><br>";
         /*cuantos registros han sido afectados sea insert, delete o udate*/
        if (mysqli_affected_rows($conexion)==0) 
-       {echo "no hay registros eliminados";}
+       {echo "<br> no hay registros eliminados";}
        else
        {echo "Se han eliminado ".mysqli_affected_rows($conexion)." registros";}
     
