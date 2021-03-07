@@ -18,8 +18,7 @@ está.*/
 
    public function __construct(){
 
-       $this->conexion_db = new mysqli(HOST, USER, PASSWORD, 
-DATABASE);
+       $this->conexion_db = new mysqli(DB_HOST, DB_USUARIO, DB_CONTRA,DB_NOMBRE);
 
 
 
