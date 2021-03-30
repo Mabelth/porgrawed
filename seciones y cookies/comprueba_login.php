@@ -5,34 +5,34 @@
     <meta charset="utf-8">
     <title>form_busqueda</title>
     <style>
-        h1 {
-            text-align: center;
-        }
+    h1 {
+        text-align: center;
+    }
 
-        table {
-            width: 30%;
-            background-color: greenyellow;
-            border: 2px dotted red;
-            margin: auto;
-        }
+    table {
+        width: 30%;
+        background-color: greenyellow;
+        border: 2px dotted red;
+        margin: auto;
+    }
 
-        .izq {
-            text-align: right;
-        }
+    .izq {
+        text-align: right;
+    }
 
-        .der {
-            text-align: left;
-        }
+    .der {
+        text-align: left;
+    }
 
-        td {
-            text-align: center;
-            padding: 10px;
-        }
+    td {
+        text-align: center;
+        padding: 10px;
+    }
     </style>
 </head>
 
 <body>
-<?php
+    <?php
 $login= $_POST["login"];
 $password = $_POST["password"];
     try {
@@ -49,11 +49,15 @@ $password = $_POST["password"];
     $numero_registro=$resultado->rowCount();
     if($numero_registro!=0)
     {
+    // se inicia secion o reanuda una secion por medio de cookies
+        session_start();
+        $_SESSION["usuario"]=$_POST["login"];
+        header("location:usuarios_registrados1.php");
         echo "<h2>LISTOS</h2>";
     }
     else
     {
-    header("localhost:login.php");
+    header("location:login.php");
     }
     
     } catch (Exception $e)
