@@ -34,7 +34,7 @@
 <body>
     <table width="490" height="170" border="2" color="blue">
         <tr>
-            <<td colspan="3" align="center">
+            <td colspan="3" align="center">
                 MARIPOSAS
                 </td>
         </tr>

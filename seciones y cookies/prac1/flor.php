@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>cFLOR</title>
+    <title>FLOR</title>
 </head>
 <style>
     h1 {

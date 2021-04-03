@@ -8,7 +8,8 @@
 
 <?php
 
-setcookie ( "prueba","es imformacio es guardada",time()-1,"");
+setcookie("Paisaje_seleccionado", $_GET["paisaje"], time() -1);
+
 ?>
 
 </html>

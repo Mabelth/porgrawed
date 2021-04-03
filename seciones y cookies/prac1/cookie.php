@@ -48,8 +48,8 @@
 
         </tr>
         <tr>
-            <td><a title="FLORES" href="crea_cokies.php?paisaje=FLORES"><img src="https://www.jardineriaon.com/wp-content/uploads/2018/04/flores-decorativas-y-vistosas.jpg.webp" width="300" height="300" alt="MUY LINDAS FLORES "></a></td>
-            <td><a title="MARIPOSAS" href="crea_cokies.php?paisaje=MARIPOSAS"><img src="https://www.caracteristicas.co/wp-content/uploads/2018/09/mariposas-1-e1579802223127.jpg" width="300" height="300" alt="MARIPOSAS "></a></td>
+            <td><a title="F" href="crea_cokies.php?paisaje=F"><img src="https://www.jardineriaon.com/wp-content/uploads/2018/04/flores-decorativas-y-vistosas.jpg.webp" width="300" height="300" alt="MUY LINDAS FLORES "></a></td>
+            <td><a title="M" href="crea_cokies.php?paisaje=M"><img src="https://www.caracteristicas.co/wp-content/uploads/2018/09/mariposas-1-e1579802223127.jpg" width="300" height="300" alt="M "></a></td>
         </tr>
 
     </table>

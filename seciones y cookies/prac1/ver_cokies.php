@@ -8,19 +8,16 @@
 
 <body>
 <?php
-    if(!$_COOKIE["Paisaje_seleccionado"])
-    {
-    header("location:pag1.php");
-    }
-    else 
-    if(!$_COOKIE["Paisaje_seleccionado"]=="FLORES")
+    if(isset($_COOKIE["Paisaje_seleccionado"])){
+   
+     if($_COOKIE["Paisaje_seleccionado"]=="F")
     {
     header("location:flor.php");
     }
-    else 
-    if(!$_COOKIE["Paisaje_seleccionado"]=="MARIPOSAS"){
+    else if($_COOKIE["Paisaje_seleccionado"]=="M"){
     header("location:mariposas.php");
     }
+}
     ?>
 </body>
 
