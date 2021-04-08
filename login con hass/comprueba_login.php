@@ -11,16 +11,28 @@ try{
 	$login=htmlentities(addslashes($_POST["login"]));
 	
 	$password=htmlentities(addslashes($_POST["password"]));
-	
+	$contador=0;
 	$base=new PDO("mysql:host=localhost; dbname=pruebas" , "root", "");
 	
-	$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql="SELECT * FROM USUARIOS_PASS WHERE USUARIOS= :login";
+	$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+	$sql= "SELECT * FROM `login` WHERE nom like :login";
 	$resultado=$base->prepare($sql);		
 	$resultado->execute(array(":login"=>$login));
 		
 		while($registro=$resultado->fetch(PDO::FETCH_ASSOC)){
-			echo "Usuario: " . $registro['USUARIOS'] . " Contraseña: " . $registro['PASSWORD'] . "<br>";		
+		/*echo "Usuario: " . $registro['nom'] . " Contraseña: " . $registro['contra'] . "<br>";		*/
+
+			if (password_verify($password, $registro['contra'])) {
+				$contador++;
+			}
+			if($contador>0){
+			
+				echo "usuario registrado <br>";
+			} else {
+
+			echo "usuario  registrado <br>";
+		}
+			
 		}
 		$resultado->closeCursor();
 }catch(Exception $e){

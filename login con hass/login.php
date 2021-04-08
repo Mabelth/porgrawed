@@ -43,7 +43,7 @@
 <td class="izq">
 Login:</td><td class="der"><input type="text" name="login"></td></tr>
 <tr><td class="izq">Password:</td><td class="der"><input type="password" name="password"></td></tr>
-<tr><td colspan="2"><input type="submit" name="enviar" value="LOGIN"></td></tr></table>
+<tr><td colspan="2"><input type="submit" name="enviar" value="login"></td></tr></table>
 
 </body>
 </html>
