@@ -57,6 +57,7 @@
     {
         echo "linaea de error" . $e->getLine();
     }
+    // -----------PAGUINACION------
     // si ocupamos ?mas una variables decimos que el dato viaje al url
     for( $i=1; $i<=$total_paguinas; $i++)
     {
