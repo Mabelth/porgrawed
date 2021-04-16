@@ -10,6 +10,7 @@
 <body>
   <?php
   include("conexion.php");
+  //----------------------PAGUINACION----------------------------
   $tamaño_paguina = 10;
 
   // $ paguina= las fila donde iniciara nuestro navegador
@@ -35,8 +36,9 @@
   $num_filas = $resultado->rowCount();
   // divido todas la filas por lo registros que quiero ver, me dara las paguina que se dividira y con ceil redondeamos el resultado
   $total_paguinas = ceil($num_filas / $tamaño_paguina);
-
-
+//--------------------PAGUINACION------------------
+  
+  
   //$conexion=$base->query("SELECT * FROM `datos_usuario`");
   // $registros=$conexion->fetchAll("PDO::FETCH_OBJ");
   $registros = $base->query("SELECT * FROM `datos_usuario` LIMIT $empezar_desde,$tamaño_paguina")->fetchAll(PDO::FETCH_OBJ);
@@ -73,7 +75,6 @@
           <td><?php echo $persona->nom ?></td>
           <td><?php echo $persona->apell ?></td>
           <td><?php echo $persona->dir ?></td>
-
 
           <td class="bot"><a href="borrar.php?id=<?php echo $persona->id ?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
           <td class='bot'>
