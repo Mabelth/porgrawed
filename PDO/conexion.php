@@ -11,6 +11,7 @@
     $conexion= new mysqli("localhost","root","","prueba");
     if($conexion->connect_errno){
     echo "fallo de conexion".$conexion->connect_errno;
+    exit();
     }
     // mysqli_set_charset($conexion,"utf8");//forma antigua procedimental
     $conexion->set_charset("utf8");
